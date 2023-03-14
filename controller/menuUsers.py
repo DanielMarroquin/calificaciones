@@ -10,18 +10,16 @@ def menuUsuarios():
         while(not successOption):
             print("========================= GESTION DE USUARIOS ===================")
             print("1.- Listar Usuarios")
-            print("2.- Consultar Usuarios")
-            print("3.- Crear Usuario")
-            print("4.- Editar Usuario")
-            print("5.- Eliminar Usuario")
-            print("6.- Volver al Menu Principal")
+            print("2.- Crear Usuario")
+            print("3.- Editar Usuario")
+            print("4.- Eliminar Usuario")
+            print("5.- Volver al Menu Principal")
             print("=================================================================")
             option = int(input("Seleccione una Opción: "))
             
-            if option < 1 or option > 6:
+            if option < 1 or option > 5:
                 print("Opción Incorrecta, ingrese nuevamente...")
-            elif option == 6:
-                #Se controla la salida del programa
+            elif option == 5:
                 showMenu = True
                 os.system('cls')
                 #menuPrincipal()
@@ -36,8 +34,6 @@ def processOption(option):
         try:
             users = dao.listUsers()
             if len(users) > 0:
-                #print(users)
-                #userList = user.findAllUsers(users)
                 max_lengths = [max(len(str(item[i])) for item in users) for i in range(len(users[0]))]
                 headers = "|".join(["{:<{}}".format(header, max_lengths[i]) for i, header in enumerate(["ID", "Nombre", "Usuario", "Clave", "Estado"])])
                 table_data = "\n".join([" | ".join(["{:<{}}".format(str(item[i]), max_lengths[i]) for i in range(len(item))]) for item in users])
@@ -48,19 +44,15 @@ def processOption(option):
             else:
                 print("No se encontraron usuarios...")
         except:
-            print("Ocurrwerwtet...")
+            print("Error opcion 1...")
     elif option == 2:
+        user = user.createUserGetData()
         try:
-            name = input("Enter the name of the user to search: ")
-            users = dao.consultUser(name)
-            if len(users) > 0:
-                print("Usuario Encontrado:", user)
-            else:
-                print("Usuario no encontrado")
+            dao.createUser(user)
         except:
-            print("Ocurrwerwtet...")
+            print("Error opcion 2...")
 
-                
+            
         
 
 
