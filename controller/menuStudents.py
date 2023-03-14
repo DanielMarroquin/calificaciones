@@ -12,7 +12,7 @@ def menuEstudiantes():
             print("3.- Editar Estudiante")
             print("4.- Eliminar Estudiante")
             print("5.- Volver al Menu Principal")
-            print("============================================================")
+            print("====================================================================")
             option = int(input("Seleccione una Opción: "))
             if option < 1 or option > 5:
                 print("Opción Incorrecta, ingrese nuevamente...")
@@ -24,3 +24,4 @@ def menuEstudiantes():
             else:
                 successOption = True
                 #processOption(option)
+                

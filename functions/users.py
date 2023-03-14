@@ -6,7 +6,6 @@ class USER():
             userName = input("Registre usuario: ")
             password = input("Registre contrasena: ")
             status = input("Ingrese estado: ")
-
             user = ( idUser, name, userName, password, status )
             return user
         
@@ -16,6 +15,4 @@ class USER():
             
 
         
-        
-#User()
-#listUsers()
+USER()

@@ -13,7 +13,7 @@ def menuCalificaciones():
             print("4.- Editar Notas por Estudiante")
             print("5.- Eliminar Notas por Estudiante")
             print("6.- Volver al Menu Principal")
-            print("============================================================")
+            print("=====================================================================")
             option = int(input("Seleccione una Opción: "))
             if option < 1 or option > 6:
                 print("Opción Incorrecta, ingrese nuevamente...")

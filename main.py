@@ -14,15 +14,14 @@ def menuPrincipal():
             print("1.- Gestión de Usuarios")
             print("2.- Gestión de Estudiantes")
             print("3.- Gestión de Calificaciones")
-            print("4.- Cerrar Sesión")
-            print("5.- Salir del Programa")
+            print("4.- Salir del Programa")
             print("============================================================")
             option = int(input("Seleccione una Opción: "))
             
             #Validacion para escoger opciones
-            if option < 1 or option > 5:
+            if option < 1 or option > 4:
                 print("Opción Incorrecta, ingrese nuevamente...")
-            elif option == 5:
+            elif option == 4:
                 #Se controla la salida del programa
                 showMenu = False
                 print("Gracias por usar el sistema..!!")
@@ -53,7 +52,8 @@ def processOption(option):
         except:
             os.system('cls')
     elif option == 4:
-        print("Eliminacion")
+        print("Adios..!!")
+        break
     else:
         print("Opcion no valida")
     
